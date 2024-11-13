@@ -43,7 +43,7 @@ curl: (52) Empty reply from server
 
 ## Fixing the failed version.
 This branch introduced a change with a wait group on service-a that waits for
-the current open requests with grpc calls to finish before shutting down
+the server shutdown call to finish to finish before shutting down
 
 1. Run
 ```bash
