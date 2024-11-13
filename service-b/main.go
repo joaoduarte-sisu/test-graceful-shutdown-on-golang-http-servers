@@ -20,7 +20,7 @@ type server struct {
 }
 
 func (s *server) CallServiceB(ctx context.Context, req *pb.CallServiceBRequest) (*pb.CallServiceBResponse, error) {
-	time.Sleep(20 * time.Second)
+	time.Sleep(10 * time.Second)
 	return &pb.CallServiceBResponse{
 		Message: "hello",
 	}, nil
