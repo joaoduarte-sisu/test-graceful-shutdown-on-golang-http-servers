@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package serviceb;
+option go_package = "serviceb/servicebpb";
+
+service ServiceB {
+    rpc CallServiceB (CallServiceBRequest) returns (CallServiceBResponse);
+}
+
+message CallServiceBRequest {}
+
+message CallServiceBResponse {
+    string message = 1;
+}
+

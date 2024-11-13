@@ -1,0 +1,23 @@
+services:
+  service-a:
+    build:
+      context: ./service-a
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service-b
+    networks:
+      - app-network
+
+  service-b:
+    build:
+      context: ./service-b
+    ports:
+      - "50051:50051"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
